@@ -5,13 +5,13 @@ const addBooks = 'addBooks';
 const removeBooks = 'removeBooks';
 const loadData = 'loadData ';
 
-function createId() {
+const createId = () => {
   return Math.floor((1 + Math.random()) * 0x10000)
     .toString(16)
     .substring(1);
 }
 
-function createStore(books = []) {
+const createStore = (books = []) => {
   let state = books;
   const contentUpdate = [];
 
@@ -90,7 +90,7 @@ form.addEventListener('submit', (event) => {
   bookStore.addBook({ title, author, id });
 });
 
-function addBookToDOM(book) {
+const addBookToDOM = (book) => {
   const node = document.createElement('li');
   const bookDetails = document.createElement('div');
   const title = document.createElement('h2');
