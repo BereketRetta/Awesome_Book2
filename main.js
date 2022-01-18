@@ -6,7 +6,6 @@ import {
   localBooks,
 } from './modules/variables.js';
 
-// import { DateTime } from './node_modules/luxon/build/es6/luxon.js';
 import renderBook from './modules/render.js';
 import setStore from './modules/setStore.js';
 
