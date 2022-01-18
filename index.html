@@ -1,60 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="main.css" />
-    <title>Awesome Books</title>
-  </head>
-  <body>
-    <header>
-      <h3>Awesome Books</h3>
-      <nav>
-        <ul>
-          <li> <a href="#add" class="link active"> List </a> </li>
-          <li> <a href="#add-new" class="link"> Add new </a> </li>
-          <li> <a href="#info" class="link"> Contact </a> </li>
-        </ul>
-      </nav>
-    </header>
 
-    <section id="add" class="container active-page">
-      <h1 class="center-text">All awesome books</h1>
-      <ul id="add-book"></ul>
-    </section>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="main.css" />
+ <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js" integrity="sha256-CnZmNCHHUMy22/PJclCIISZ5Ib4MnUu+7ee5YNxtsZQ=" crossorigin="anonymous"></script>
+<title>Awesome-Books</title>
+</head>
 
-    <section id="add-new" class="container">
-      <div id="title">
-        <h1>Add a book</h1>
-      </div>
-      <form id="book-entry">
-        <input type="text" placeholder="Title" required />
-        <input type="text" placeholder="Author" required />
-        <button type="submit">Add</button>
-      </form>
-    </section>
+<body>
+<main>
+<nav>
+<div class="heading">
+<p>Awesome books</p>
+</div>
+<ul class="links">
+<li><a id="render-books" class='active' href="#">List</a></li>
+<li class="line"></li>
+<li><a id="form-container" href="#">Add new</a></li>
+<li class="line"></li>
+<li><a id="contact-form" href="#">Contact</a></li>
+</ul>
+</nav>
+<p id="date"></p>
+<div class='render-books show-me'>
+<h1 class="header">All awesome books</h1>
+<hr/>
+<div id="render-content"></div>
+</div>
+<div class="form-container">
+<h2>Add a new book</h2>
+<form id="booksForm" action="#">
+<input id="title" type="text" placeholder="Title"><br/>
+<input id="author" type="text" placeholder="Author"><br/>
+<input id="addBook" type="submit" value='Add'>
+</form>
+</div>
+<div class="contact-form">
+<h2>Contact Information</h2>
+<div class="text">
+<p>Do you have any questions or you just want to say "Hello"?
+</p>
+<p>You can reach out to us!</p>
+</div>
+<ul>
+<li>Our email: email@gmail.com</li>
+<li>Our phone number: 0123456789</li>
+<li>Our address: Streetname ,City, Country</li>
+</ul>
+</div>
+<footer>
+<p>Copyright: &copy; 2022</p>
+</footer>
+</main>
+<script type="module" src="main.js"></script>
+</body>
 
-    <section class="container" id="info">
-      <div id="contact">
-        <h1>Contact information</h1>
-        <p>Reach out to us if you have any questions or just want to say "Hello"?</p>
-        <ul>
-          <li>Email: email@gmail.com</li>
-          <li>Phone Number: 0123456789</li>
-          <li>Address: Streetname 22, 84503 City, Country</li>
-        </ul>
-      </div>
-    </section>
-    <footer>
-      <h3>Copyright 2021</h3>
-    </footer>
-    <script src="main.js"></script>
-  </body>
 </html>
